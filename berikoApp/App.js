@@ -1,9 +1,10 @@
 
 import { StatusBar } from 'expo-status-bar';
-import {View, Text, Image, ScrollView, TextInput,StyleSheet} from 'react-native';
+import { Alert,View, Text, Image, ScrollView, TextInput,StyleSheet,TouchableHighlight,TouchableOpacity,} from 'react-native';
 import BerikoSVGComponent from './assets/BerikoSVGComponent';
+import ArrowSVGComponent from './assets/ArrowSVGComponent';
 import FontStyles from './assets/Fontstyle';
-
+import DullBerikoSVGComponent from './assets/DullBerikoSVGComponent';
 import React, { useState, useEffect } from 'react';
 
 import {
@@ -83,6 +84,9 @@ export default function App() {
     Nunito_800ExtraBold_Italic,
     Nunito_900Black_Italic,
   });
+  function _onPressButton() {
+    Alert.alert('You tapped the button!');
+  }
 
   let fontSize = 24;
   let paddingVertical = 6;
@@ -94,9 +98,11 @@ export default function App() {
 
       
       <View style={{flex:1,justifyContent:'center',backgroundColor:'#243236',padding:20}}>
-          <View style={{ transform: [{ rotate: '30deg' }] , paddingBottom:80 }}>
+
+          <View style={{ transform: [{ rotate: '30deg' }] , padding:60 }}>
               <BerikoSVGComponent width={300} height={300}/>
           </View>
+
           <View style={{margin:20}}>
             <Text style={styles.text}>Beriko</Text>
             <View style={{marginTop:20}}>
@@ -109,6 +115,46 @@ export default function App() {
 
             </View>
           </View>
+
+          <View style={{margin:20,flex:1,flexDirection:'row',padding:2}}>
+            <View style={{paddingLeft:10,paddingRight:10}}> 
+              <BerikoSVGComponent width={30} height={30}/> 
+            </View>
+            <View style={{paddingLeft:10,paddingRight:10}}> 
+              <DullBerikoSVGComponent width={30} height={30}/> 
+            </View>
+            <View style={{paddingLeft:10,paddingRight:10}}> 
+              <DullBerikoSVGComponent width={30} height={30}/> 
+            </View>
+          </View>
+
+          <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',marginTop:15,marginBottom:15,marginLeft:10,marginLeft:10,padding:20}}>
+              <View >
+                <TouchableHighlight onPress={_onPressButton} underlayColor="white">
+            
+                  <Text style={{color:'white',fontFamily:'Nunito_600SemiBold',fontSize:20}}>Skip</Text>
+          
+                </TouchableHighlight>
+                
+              </View>
+              <View >
+              <TouchableOpacity onPress={_onPressButton}>
+                <View style={styles.button}>
+                  <ArrowSVGComponent width={30} height={30}/>
+                </View>
+            </TouchableOpacity>
+                
+              </View>
+
+
+
+
+          </View>
+
+
+          
+
+          
         
       </View>
      
@@ -118,7 +164,7 @@ const styles=StyleSheet.create({
  text:{
   color:'#08cc7e',
   fontSize:65,
-  fontFamily: 'Nunito_700Bold',
+  fontFamily: 'Nunito_800ExtraBold',
   
  },
  subTexts:{
@@ -136,7 +182,22 @@ const styles=StyleSheet.create({
   fontFamily:'Nunito_600SemiBold'
   
 
- }
+ },
+ button: {
+  marginBottom: 30,
+ justifyContent: 'center',
+  alignItems: 'center',
+  width: 50,
+  height: 50,
+  alignItems: 'center',
+  borderRadius: 100,
+  backgroundColor: '#08cc7e',
+},
+buttonText: {
+  textAlign: 'center',
+  padding: 20,
+  color: 'white',
+},
 
 });
 
