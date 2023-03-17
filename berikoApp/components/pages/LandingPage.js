@@ -115,7 +115,7 @@ export default function LandingPage({navigation}) {
             </View>
           </View>
 
-          <View style={{margin:20,flex:1,flexDirection:'row',padding:2}}>
+          {/* <View style={{margin:20,flex:1,flexDirection:'row',padding:2}}>
             <View style={{paddingLeft:10,paddingRight:10}}> 
               <BerikoSVGComponent width={30} height={30}/> 
             </View>
@@ -125,7 +125,7 @@ export default function LandingPage({navigation}) {
             <View style={{paddingLeft:10,paddingRight:10}}> 
               <DullBerikoSVGComponent width={30} height={30}/> 
             </View>
-          </View>
+          </View> */}
 
           <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',marginTop:15,marginBottom:15,marginLeft:10,marginLeft:10,padding:20}}>
               <View >
