@@ -1,3 +1,3 @@
 # Beriko
 The app
-![Beriko-removebg](https://user-images.githubusercontent.com/76263002/226038929-ef7fe9a8-44ad-4daa-a15c-ebdc3446f856.png)
+![Beriko](https://user-images.githubusercontent.com/76263002/233544100-0b7ccc0d-a1df-4851-a44a-1ed170cd8d54.png)
